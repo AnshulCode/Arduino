@@ -10,7 +10,7 @@ void setup() {
 }
 //Add more comments..
 void loop() {
-   long duration, inches, distance; // special data type for long integers
+   long duration, inches, distance; // special data type for long decimals, useful for time data
    pinMode(pingPin, OUTPUT);
    digitalWrite(pingPin, LOW);
    delayMicroseconds(2);
@@ -21,10 +21,10 @@ void loop() {
    
    digitalWrite(pingPin, LOW);
    pinMode(echoPin, INPUT);
-   duration = pulseIn(echoPin, HIGH);
+   duration = pulseIn(echoPin, HIGH);// mesures the pulse given from Ultrasonic sensor
  
    distance = microsecondsToCentimeters(duration);
-  
+  // values print in serial monitor
    Serial.print(distance);
    Serial.print("cm");
    Serial.println();
@@ -48,7 +48,7 @@ void loop() {
    
 }
 
-// fuctions for conversion
+// fuction for conversion(ms-cm)
 
 long microsecondsToCentimeters(long microseconds) {
    return microseconds / 29 / 2;
