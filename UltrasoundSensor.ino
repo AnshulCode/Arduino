@@ -8,7 +8,7 @@ void setup() {
    Serial.begin(9600);// Starting Serial Terminal
    pinMode(red,OUTPUT);
 }
-
+//Add more comments..
 void loop() {
    long duration, inches, distance; // special data type for long integers
    pinMode(pingPin, OUTPUT);
