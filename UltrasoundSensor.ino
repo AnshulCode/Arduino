@@ -3,10 +3,15 @@ const int echoPin = 6; // Echo Pin of Ultrasonic Sensor
 int red = 13;
 int yellow = 12;
 int green = 11;
+int spPin = 3;
 
 void setup() {
    Serial.begin(9600);// Starting Serial Terminal
    pinMode(red,OUTPUT);
+   pinMode(yellow,OUTPUT);
+   pinMode(green,OUTPUT);
+   
+
 }
 //Add more comments..
 void loop() {
@@ -35,6 +40,7 @@ void loop() {
      digitalWrite(red,HIGH);
      delay(100);
      digitalWrite(red,LOW);
+     tone(spPin,5000);
     }else if(distance > 6 && distance < 20){
        digitalWrite(yellow,HIGH);
         delay(100);
