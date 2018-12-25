@@ -40,15 +40,17 @@ void loop() {
      digitalWrite(red,HIGH);
      delay(100);
      digitalWrite(red,LOW);
-     tone(spPin,5000);
+     tone(spPin,1000,500);
+     
     }else if(distance > 6 && distance < 20){
        digitalWrite(yellow,HIGH);
-        delay(100);
+       delay(100);
        digitalWrite(yellow,LOW);
+       
       }else{
         digitalWrite(green,HIGH);
-         delay(100);
-       digitalWrite(green,LOW);
+        delay(100);
+        digitalWrite(green,LOW);
         }
 
    
